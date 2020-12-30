@@ -4,6 +4,8 @@
 #define RIGHT 2
 #define LEFT -2
 
+#define MAX 60
+
 
 void initializeGrid(int, int);
 void drawGrid();

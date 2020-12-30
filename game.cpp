@@ -9,6 +9,8 @@
 int gridX;
 int gridY;
 
+int snakeLength = 5;
+
 bool food = true;
 int foodX, foodY;
 
@@ -16,7 +18,7 @@ short sDirection = RIGHT;
 extern bool gameover;
 
 
-int posX = 20, posY = 20;
+int posX[60] = { 20,20,20,20,20 }, posY[60] = {20,19,18,17,16};
 
 void unit(int, int);
 
@@ -71,36 +73,53 @@ void drawFood()
 
 void drawSnake()
 {
+	for (int i = snakeLength - 1; i > 0; i--)
+	{
+		posX[i] = posX[i - 1];
+		posY[i] = posY[i - 1];
+	}
 	if (sDirection == UP){
-		posY++;
+		posY[0]++;
 	}
 	else if (sDirection == DOWN){
-		posY--;
+		posY[0]--;
 	}
 	else if (sDirection == RIGHT){
-		posX++;
+		posX[0]++;
 	}
 	else if (sDirection == LEFT){
-		posX--;
+		posX[0]--;
 	}
 	
-	glColor3f(0.0, 1.0, 0.0);
-	glRectd(posX, posY, posX + 1, posY + 1);
-	if (posX == 0 || posX == gridX - 1 || posY == 0 || posY == gridY - 1)
+	for (int i = 0; i < snakeLength; i++)
+	{
+		if (i == 0)
+			glColor3f(0.0, 1.0, 0.0);
+		else
+			glColor3f(0.0, 0.0, 1.0);
+		glRectd(posX[i], posY[i], posX[i] + 1, posY[i] + 1);
+	}
+	//only do collision detection for head element
+	if (posX[0] == 0 || posX[0] == gridX - 1 || posY[0] == 0 || posY[0] == gridY - 1)
 	{
 		gameover = true;
 	}
-	if (posX == foodX && posY == foodY)
+	//collision detection for the food
+	if (posX[0] == foodX && posY[0] == foodY)
 	{
+		snakeLength++;
+		if (snakeLength > MAX)
+			snakeLength = MAX;
+
 		food = true;
 	}
 }
 
 void random(int &x, int &y)
 {
-	int maxValueX = gridX - 1;
-	int maxValueY = gridY - 1;
-	int minValue = 1;
+	int maxValueX = gridX - 2;
+	int maxValueY = gridY - 2;
+	int minValue = 2;
 	srand(time(NULL)); //return an integer number used to seed the random number
 	x = rand() % maxValueX + minValue; //get random number from 1 to 38
 	y = rand() % maxValueY + minValue;

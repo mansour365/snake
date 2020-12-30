@@ -25,29 +25,20 @@ void init()
 
 int main(int argc, char** argv)
 {
-	//initilize glut
-	glutInit(&argc, argv);
-	//initilize the display mode
-	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
-	//initilize the window size
-	glutInitWindowSize(500, 500);
-	//Create the window
-	glutCreateWindow("Snake");
-	//Reshape function
-	glutReshapeFunc(reshape);
+	glutInit(&argc, argv); //initilize glut
+	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE); //initilize the display mode
+	glutInitWindowSize(500, 500); //initilize the window size
+	glutCreateWindow("Snake"); //Create the window
+	glutReshapeFunc(reshape); //Reshape function
 
 	glutTimerFunc(0, timer, 0);
-
 	glutSpecialFunc(keyboard);
 
-	//initialize background color (before display())
-	init();
+	init(); //initialize background color (before display())
 
-	//register display callback
-	glutDisplayFunc(display);
+	glutDisplayFunc(display); //register display callback
 
-	//mainloop
-	glutMainLoop();
+	glutMainLoop(); //mainloop
 
 	return 0;
 }
@@ -55,12 +46,11 @@ int main(int argc, char** argv)
 
 void display()
 {
-	//clear buffer at the begining of each frame
-	glClear(GL_COLOR_BUFFER_BIT);
-	//draw the grid
-	drawGrid();
-	drawSnake();
-	drawFood();
+	glClear(GL_COLOR_BUFFER_BIT); //clear buffer at the begining of each frame
+	
+	drawGrid(); //draw the grid
+	drawSnake(); //draw the snake
+	drawFood(); //draw the food
 	glutSwapBuffers();
 	if (gameover == true)
 	{
