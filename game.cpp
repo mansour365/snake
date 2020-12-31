@@ -53,7 +53,7 @@ void unit(int x, int y)
 	else
 	{
 		glLineWidth(1.0);
-		glColor3f(1.0, 1.0, 1.0);
+		glColor3f(0.5, 0.5, 0.5);
 	}
 
 	glBegin(GL_LINE_LOOP);
@@ -100,10 +100,10 @@ void drawSnake()
 		if (i == 0)
 			glColor3f(0.0, 1.0, 0.0);
 		else
-			glColor3f(0.0, 0.0, 1.0);
+			glColor3f(0.0, 0.5, 0.0);
 		glRectd(posX[i], posY[i], posX[i] + 1, posY[i] + 1);
 	}
-	//check colision with tail
+	//check collision with tail
 	for (int j = 1; j < snakeLength; j++)
 	{
 		if (posX[j] == posX[0] && posY[j] == posY[0])
