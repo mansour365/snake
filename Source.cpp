@@ -47,7 +47,7 @@ int main(int argc, char** argv)
 void display()
 {
 	glClear(GL_COLOR_BUFFER_BIT); //clear buffer at the begining of each frame
-	
+
 	drawGrid(); //draw the grid
 	drawSnake(); //draw the snake
 	drawFood(); //draw the food

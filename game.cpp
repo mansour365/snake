@@ -4,6 +4,10 @@
 #include <ctime>
 #include "game.h"
 
+#include <iostream>
+using namespace std;
+
+
 
 
 int gridX;
@@ -115,10 +119,11 @@ void drawSnake()
 	}
 }
 
+
 void random(int &x, int &y)
 {
-	int maxValueX = gridX - 2;
-	int maxValueY = gridY - 2;
+	int maxValueX = gridX - 3;
+	int maxValueY = gridY - 3;
 	int minValue = 2;
 	srand(time(NULL)); //return an integer number used to seed the random number
 	x = rand() % maxValueX + minValue; //get random number from 1 to 38
