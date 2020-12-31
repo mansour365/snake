@@ -2,15 +2,17 @@
 #include "Dependencies\glew\glew.h"
 #include "Dependencies\freeglut\freeglut.h"
 #include "game.h"
+#include <stdlib.h>
 
 #define ROWS 40
 #define COLUMNS 40
-
 #define FPS 10//might be too slow on the virtual machine (might need to increase this)
 
 extern short sDirection;
 
 bool gameover = false;
+
+int score = 0;
 
 void timer(int);
 void display();
@@ -54,7 +56,13 @@ void display()
 	glutSwapBuffers();
 	if (gameover == true)
 	{
-		MessageBoxA(NULL, "Your score is : ", "Game Over", 0);
+		char finalScore[10]; //10 bytes of storage
+		//convert integer score to character
+		_itoa_s(score, finalScore, 10); //source, destination buffer, base 10 since its a decimal
+		char text[50] = "Your score: ";
+		//string concatenation
+		strcat_s(text, finalScore);
+		MessageBoxA(NULL, text, "Game Over", 0);
 		exit(0);
 	}
 }

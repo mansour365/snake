@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-
+extern int score;
 
 
 int gridX;
@@ -103,6 +103,12 @@ void drawSnake()
 			glColor3f(0.0, 0.0, 1.0);
 		glRectd(posX[i], posY[i], posX[i] + 1, posY[i] + 1);
 	}
+	//check colision with tail
+	for (int j = 1; j < snakeLength; j++)
+	{
+		if (posX[j] == posX[0] && posY[j] == posY[0])
+			gameover = true;
+	}
 	//only do collision detection for head element
 	if (posX[0] == 0 || posX[0] == gridX - 1 || posY[0] == 0 || posY[0] == gridY - 1)
 	{
@@ -111,6 +117,7 @@ void drawSnake()
 	//collision detection for the food
 	if (posX[0] == foodX && posY[0] == foodY)
 	{
+		score++;
 		snakeLength++;
 		if (snakeLength > MAX)
 			snakeLength = MAX;
