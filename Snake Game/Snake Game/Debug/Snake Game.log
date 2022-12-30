@@ -1,17 +1,15 @@
 ﻿  game.cpp
-C:\Users\Admin\Desktop\Snake Game\Snake Game\game.cpp(60,16): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-C:\Users\Admin\Desktop\Snake Game\Snake Game\game.cpp(60,13): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-C:\Users\Admin\Desktop\Snake Game\Snake Game\game.cpp(61,20): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-C:\Users\Admin\Desktop\Snake Game\Snake Game\game.cpp(61,15): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-C:\Users\Admin\Desktop\Snake Game\Snake Game\game.cpp(62,22): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-C:\Users\Admin\Desktop\Snake Game\Snake Game\game.cpp(62,15): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-C:\Users\Admin\Desktop\Snake Game\Snake Game\game.cpp(63,18): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-C:\Users\Admin\Desktop\Snake Game\Snake Game\game.cpp(63,13): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-C:\Users\Admin\Desktop\Snake Game\Snake Game\game.cpp(77,41): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-C:\Users\Admin\Desktop\Snake Game\Snake Game\game.cpp(77,30): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-C:\Users\Admin\Desktop\Snake Game\Snake Game\game.cpp(77,17): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-C:\Users\Admin\Desktop\Snake Game\Snake Game\game.cpp(77,10): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-C:\Users\Admin\Desktop\Snake Game\Snake Game\game.cpp(86,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Source.cpp
-  Generating Code...
-  Snake Game.vcxproj -> C:\Users\Admin\Desktop\Snake Game\Debug\Snake Game.exe
+C:\Users\Admin\coding\snake\Snake Game\Snake Game\game.cpp(60,16): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\Admin\coding\snake\Snake Game\Snake Game\game.cpp(60,13): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\Admin\coding\snake\Snake Game\Snake Game\game.cpp(61,20): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\Admin\coding\snake\Snake Game\Snake Game\game.cpp(61,15): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\Admin\coding\snake\Snake Game\Snake Game\game.cpp(62,22): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\Admin\coding\snake\Snake Game\Snake Game\game.cpp(62,15): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\Admin\coding\snake\Snake Game\Snake Game\game.cpp(63,18): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\Admin\coding\snake\Snake Game\Snake Game\game.cpp(63,13): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\Admin\coding\snake\Snake Game\Snake Game\game.cpp(77,41): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\Admin\coding\snake\Snake Game\Snake Game\game.cpp(77,30): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\Admin\coding\snake\Snake Game\Snake Game\game.cpp(77,17): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\Admin\coding\snake\Snake Game\Snake Game\game.cpp(77,10): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\Admin\coding\snake\Snake Game\Snake Game\game.cpp(86,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Snake Game.vcxproj -> C:\Users\Admin\coding\snake\Snake Game\Debug\Snake Game.exe

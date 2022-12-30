@@ -47,7 +47,7 @@ void unit(int x, int y)
 	if (x == 0 || y == 0 || x == gridX - 1 || y == gridY - 1)
 	{
 		glLineWidth(3.0);
-		glColor3f(1.0, 0.0, 0.0);
+		glColor3f(0.0, 1.0, 1.0);
 	}
 	//otherwise unit squares are grey
 	else
